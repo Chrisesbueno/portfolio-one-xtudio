@@ -1,0 +1,47 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: rgba(255, 255, 255, 0.98);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+}
+
+.logo {
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 9999;
+}
+
+.logoImage {
+  width: 200px;
+  height: auto;
+  animation: subtlePulse 2s infinite ease-in-out;
+}
+
+.percentage {
+  font-size: 2.2rem;
+  font-weight: 300;
+  font-family: "Courier New", monospace;
+  color: #000;
+  z-index: 9999;
+  letter-spacing: 1px;
+}
+
+@keyframes subtlePulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.02);
+  }
+}

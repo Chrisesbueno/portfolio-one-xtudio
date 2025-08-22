@@ -1,0 +1,25 @@
+.floatingContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.floatingText {
+  position: absolute;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+  font-family: "Courier New", monospace;
+  white-space: nowrap;
+  text-shadow: 1px 1px 4px rgba(255, 255, 255, 0.8);
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+  backdrop-filter: blur(1px);
+  transition: transform 0.1s linear, opacity 0.5s ease-in-out;
+  will-change: transform, opacity;
+}

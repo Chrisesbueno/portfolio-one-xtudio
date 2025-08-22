@@ -1,7 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  images: {
+    domains: ["localhost"],
+    // domains: ['tudominio.com'],
+  },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: "",
+  },
 };
 
 export default nextConfig;
