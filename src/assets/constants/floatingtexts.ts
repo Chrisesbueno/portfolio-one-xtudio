@@ -1,5 +1,4 @@
 export const FLOATING_TEXTS = [
-  // UI/UX
   "UI/UX Design",
   "User Experience",
   "User Interface",
@@ -9,8 +8,6 @@ export const FLOATING_TEXTS = [
   "Adobe XD",
   "Sketch",
   "User Research",
-
-  // Desarrollo Web
   "Web Development",
   "React",
   "Next.js",
@@ -25,8 +22,6 @@ export const FLOATING_TEXTS = [
   "API REST",
   "GraphQL",
   "Web Performance",
-
-  // Desarrollo Móvil
   "Mobile Apps",
   "React Native",
   "Flutter",
@@ -34,8 +29,6 @@ export const FLOATING_TEXTS = [
   "Android",
   "Cross-platform",
   "Native Development",
-
-  // Software
   "Software Engineering",
   "Clean Code",
   "Architecture",
@@ -45,8 +38,6 @@ export const FLOATING_TEXTS = [
   "Azure",
   "Docker",
   "Kubernetes",
-
-  // Marketing y SEO
   "Digital Marketing",
   "SEO",
   "SEM",
@@ -56,8 +47,6 @@ export const FLOATING_TEXTS = [
   "Analytics",
   "Conversion Rate",
   "Growth Hacking",
-
-  // Otros
   "Creative Solutions",
   "Innovation",
   "Problem Solving",

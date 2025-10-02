@@ -1,9 +1,11 @@
-import HeaderMain from "@/modules/header/HeaderMain";
+import Header from "@/modules/header/Header";
+import Home from "@/modules/home/Home";
 
 export default function Main() {
   return (
     <div>
-      <HeaderMain />
+      <Header />
+      <Home />
     </div>
   );
 }
