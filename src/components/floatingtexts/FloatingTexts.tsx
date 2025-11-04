@@ -12,7 +12,7 @@ interface FloatingText {
   opacity: number;
   visible: boolean;
   fontSize: number;
-  elementRef: React.RefObject<HTMLDivElement>;
+  elementRef: React.RefObject<HTMLDivElement | null>;
 }
 
 interface FloatingTextsProps {
@@ -25,7 +25,7 @@ const FloatingTexts: React.FC<FloatingTextsProps> = ({
   progress = 0,
 }) => {
   const [floatingTexts, setFloatingTexts] = useState<FloatingText[]>([]);
-  const animationRef = useRef<number>();
+  const animationRef = useRef<number>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
