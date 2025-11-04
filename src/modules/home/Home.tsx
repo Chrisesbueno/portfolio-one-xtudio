@@ -1,12 +1,16 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import styles from "./styles/Home.module.css";
+import AnimationBars from "@/assets/animations/bars/AnimationBars";
+import Image from "next/image";
+import { REFERENCE_1 } from "@/assets/images";
 
 const rotatingWords = ["Creative", "Innovative", "Unique", "Impactful"];
 const rotatingColors = ["#FFEB3B", "#4CAF50", "#F44336", "#2196F3"];
 
 const Home: React.FC = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [isAnimationOpen, setIsAnimationOpen] = useState(false); // Iniciar cerrado
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -21,7 +25,54 @@ const Home: React.FC = () => {
     <div className={styles.homeContainer}>
       <div className={`${styles.row} ${styles.row1}`}>
         <div className={`${styles.block} ${styles.row1Col1}`}>Col 40%</div>
-        <div className={`${styles.block} ${styles.row1Col2}`}>Col 60%</div>
+        <div className={`${styles.block} ${styles.row1Col2}`}>
+          <div className={styles.photoGrid}>
+            {/* Primera sección con AnimationBars */}
+            <div className={styles.photoItem}>
+              <AnimationBars isOpen={isAnimationOpen}>
+                <div className={styles.mediaContent}>
+                  <Image
+                    src={REFERENCE_1}
+                    alt="Contenido"
+                    className={styles.media}
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+              </AnimationBars>
+            </div>
+
+            {/* Segunda sección con AnimationBars */}
+            <div className={styles.photoItem}>
+              <AnimationBars isOpen={isAnimationOpen}>
+                <div className={styles.mediaContent}>
+                  <Image
+                    src={REFERENCE_1}
+                    alt="Contenido"
+                    className={styles.media}
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+              </AnimationBars>
+            </div>
+
+            {/* Tercera sección con AnimationBars */}
+            <div className={styles.photoItem}>
+              <AnimationBars isOpen={isAnimationOpen}>
+                <div className={styles.mediaContent}>
+                  <Image
+                    src={REFERENCE_1}
+                    alt="Contenido"
+                    className={styles.media}
+                    fill
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+              </AnimationBars>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className={`${styles.row} ${styles.row2}`}>

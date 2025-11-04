@@ -1,0 +1,133 @@
+.animationContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.mediaContent {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.bar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 33.333%;
+  background: #4caf50; /* Color de fondo del bloque */
+  z-index: 2;
+}
+
+.bar1 {
+  top: 0;
+  left: -100%;
+  animation-delay: 0s;
+}
+
+.bar2 {
+  top: 33.333%;
+  right: -100%; /* Comienza desde la derecha */
+  animation-delay: 0.2s;
+}
+
+.bar3 {
+  top: 66.666%;
+  left: -100%;
+  animation-delay: 0.4s;
+}
+
+/* Estados del contenedor */
+.animationContainer.closed .mediaContent {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.animationContainer.open .mediaContent {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Animación ABRIR - solo se activa con hover */
+.animationContainer:hover .bar1,
+.animationContainer:hover .bar3 {
+  animation: slideOpenFromLeft 0.8s ease-in-out forwards;
+}
+
+.animationContainer:hover .bar2 {
+  animation: slideOpenFromRight 0.8s ease-in-out forwards;
+}
+
+/* Animación CERRAR - se ejecuta automáticamente al cambiar isOpen a false */
+.bar.closeAnimation {
+  animation: slideClose 0.8s ease-in-out forwards;
+}
+
+.bar1.closeAnimation,
+.bar3.closeAnimation {
+  animation: slideCloseToLeft 0.8s ease-in-out forwards;
+}
+
+.bar2.closeAnimation {
+  animation: slideCloseToRight 0.8s ease-in-out forwards;
+}
+
+/* Keyframes para ABRIR */
+@keyframes slideOpenFromLeft {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes slideOpenFromRight {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 100%;
+  }
+}
+
+/* Keyframes para CERRAR */
+@keyframes slideCloseToLeft {
+  0% {
+    left: 100%;
+  }
+  100% {
+    left: -100%;
+  }
+}
+
+@keyframes slideCloseToRight {
+  0% {
+    right: 100%;
+  }
+  100% {
+    right: -100%;
+  }
+}
+
+.animationContainer:not(:hover) .bar {
+  animation: none;
+}
+
+.animationContainer.closed .bar1,
+.animationContainer.closed .bar3 {
+  left: -100%;
+}
+
+.animationContainer.closed .bar2 {
+  right: -100%;
+}

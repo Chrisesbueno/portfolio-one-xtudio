@@ -1,5 +1,4 @@
 "use client";
-// import Loading from "@/components/loading/Loading";
 import { useState, useEffect } from "react";
 import styles from "./styles/Header.module.css";
 import Image from "next/image";
