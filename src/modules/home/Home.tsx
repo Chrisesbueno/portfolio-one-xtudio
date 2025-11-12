@@ -10,7 +10,7 @@ const rotatingColors = ["#FFEB3B", "#4CAF50", "#F44336", "#2196F3"];
 
 const Home: React.FC = () => {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [isAnimationOpen, setIsAnimationOpen] = useState(false); // Iniciar cerrado
+  const [isAnimationOpen, setIsAnimationOpen] = useState(false);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -27,7 +27,6 @@ const Home: React.FC = () => {
         <div className={`${styles.block} ${styles.row1Col1}`}>Col 40%</div>
         <div className={`${styles.block} ${styles.row1Col2}`}>
           <div className={styles.photoGrid}>
-            {/* Primera sección con AnimationBars */}
             <div className={styles.photoItem}>
               <AnimationBars isOpen={isAnimationOpen}>
                 <div className={styles.mediaContent}>
@@ -42,7 +41,6 @@ const Home: React.FC = () => {
               </AnimationBars>
             </div>
 
-            {/* Segunda sección con AnimationBars */}
             <div className={styles.photoItem}>
               <AnimationBars isOpen={isAnimationOpen}>
                 <div className={styles.mediaContent}>
@@ -57,7 +55,6 @@ const Home: React.FC = () => {
               </AnimationBars>
             </div>
 
-            {/* Tercera sección con AnimationBars */}
             <div className={styles.photoItem}>
               <AnimationBars isOpen={isAnimationOpen}>
                 <div className={styles.mediaContent}>
