@@ -1,0 +1,192 @@
+.constructionContainer {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000000;
+  color: #ffffff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.bigText {
+  font-size: clamp(2rem, 6vw, 4rem);
+  font-weight: 700;
+  text-align: center;
+  line-height: 1.1;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bottomLine {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.staticText {
+  display: inline-block;
+}
+
+.rotatingWord {
+  display: inline-block;
+  min-width: 200px;
+  text-align: center;
+  animation: fadeInOut 2s ease-in-out infinite;
+}
+
+.launchInfo {
+  font-size: 1.2rem;
+  color: #cccccc;
+  margin-top: -10px;
+}
+
+.progressSection {
+  width: 100%;
+  max-width: 400px;
+  margin-top: -5px;
+}
+
+.progressHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #cccccc;
+}
+
+.percentage {
+  font-weight: 600;
+  font-size: 1.1rem;
+  transition: color 0.5s ease;
+}
+
+.progressBar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: 4px;
+  transition: all 0.5s ease;
+}
+
+.contactRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: -5px;
+}
+
+.contactSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.contactIcon {
+  font-size: 1.2rem;
+  transition: color 0.5s ease;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.socialIcon {
+  font-size: 1.5rem;
+  transition: all 0.5s ease;
+}
+
+.socialIcon:hover {
+  transform: translateY(-2px);
+  opacity: 0.8;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  15% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  85% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .constructionContainer {
+    padding: 40px 20px;
+  }
+
+  .content {
+    gap: 25px;
+  }
+
+  .bigText {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+  }
+
+  .bottomLine {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .rotatingWord {
+    min-width: 180px;
+  }
+
+  .launchInfo {
+    font-size: 1rem;
+  }
+
+  .contactRow {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contactSection {
+    font-size: 1rem;
+  }
+
+  .socialIcons {
+    gap: 15px;
+  }
+
+  .socialIcon {
+    font-size: 1.3rem;
+  }
+}
